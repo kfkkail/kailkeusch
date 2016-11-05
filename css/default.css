@@ -55,9 +55,9 @@ a {
 
 .akHeader {
     text-align: center;
-    font-family: 'Arizonia';
+    font-family: 'Lato';
     font-weight: bold;
-    background:#fff url(http://paperpk.com/uploads/sub_category_img/1476357853375096882-small.jpg) no-repeat center;
+
     background-size: cover;
     background-position: 29% 50%;
     padding-top: 40px;
@@ -101,7 +101,7 @@ a {
 }
 
 .akHeader1 {
-    font-family: 'Arizonia';
+    font-family: 'Lato';
     text-align: left;
 }
 
@@ -109,18 +109,7 @@ a {
     background-color: rgba(0, 0, 0, 0);
     color: black;
     text-align: center;
-    border-radius: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 120px;
-}
-
-.jumbotron h1,
-.jumbotron h2{
-    background: rgba(255, 255, 255, 0.4);
-    padding: 20px;
-    display: inline-block;
-    border-radius: 6px;
+    margin-bottom: 40px;
 }
 
 .jumbotron h1 {
