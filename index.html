@@ -10,13 +10,6 @@
 
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <!-- For iPhone 4 with high-resolution Retina display: -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-    <!-- For first-generation iPad: -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png">
-
     <title>Kail Keusch</title>
 
     <!-- Bootstrap core CSS -->
@@ -145,8 +138,8 @@
                     <div class="col-md-9">
                         <h3><a href="mailto:kail.keusch@gmail.com">kail.keusch@gmail.com</a></h3>
                         <ul class='akSocialul'>
-                            <li class='akSocialli'><a id="githubKail" href="https://www.Facebook.com/LarimarTravels"><i class="akSociali fa fa-github"></i></a></li>
-                            <li class='akSocialli'><a id="linkedinKail" href="http://www.LarimarTravels.com"><i class="akSociali fa fa-linkedin"></i></a></li>
+                            <li class='akSocialli'><a id="githubKail" href="https://github.com/kfkkail"><i class="akSociali fa fa-github"></i></a></li>
+                            <li class='akSocialli'><a id="linkedinKail" href="https://www.linkedin.com/in/keuschkf"><i class="akSociali fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -154,50 +147,9 @@
         </section> <!-- /.contact -->
     </div> <!-- /container -->
 
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-    <script>
-    // Smooth scroll for in page links
-        $(function(){
-            var animateOffset;
-            var navbarTarget;
-            // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
-            $(window).on('scroll', function() {
-                //offset needs to be equal to the akHeader height plus .akHeader padding-top
-                var heightOffset = $("#top.akHeader").height()+40;
-                var multiplier = 1;
-                //console.log(heightOffset - $(window).scrollTop());
-
-                if ($(window).scrollTop() > heightOffset) {
-                    animateOffset = 1;
-                    navbarTarget = 0;
-                } else {
-                    animateOffset = 0;
-                    navbarTarget = heightOffset-$(window).scrollTop()
-                }
-
-                $('.akContainer').css({
-                    "top" : navbarTarget + "px"
-                });
-            });
-
-        	$("a[href*=#]:not([href=#])").on("click", function(e) {
-
-        		$.scrollTo(
-        			$(this).attr("href"),
-        			{
-        				duration: 1000,
-        				offset: { 'left':0, 'top':-0.06*$(window).height() }
-        			}
-        		);
-        			e.preventDefault();
-        	})
-        });
-    </script>
   </body>
 </html>
