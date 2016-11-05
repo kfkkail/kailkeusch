@@ -45,8 +45,8 @@ a {
   color: #A3BAB4;
 }
 
-.navbar-default .nav-justified > .active > a, 
-.navbar-default .nav-justified > .active > a:hover, 
+.navbar-default .nav-justified > .active > a,
+.navbar-default .nav-justified > .active > a:hover,
 .navbar-default .nav-justified > .active > a:focus {
     color: #fff;
     background: #A3BAB4;
@@ -57,7 +57,7 @@ a {
     text-align: center;
     font-family: 'Arizonia';
     font-weight: bold;
-    background:#fff url(../img/EngagementPhotos-31.jpg) no-repeat center;
+    background:#fff url(http://paperpk.com/uploads/sub_category_img/1476357853375096882-small.jpg) no-repeat center;
     background-size: cover;
     background-position: 29% 50%;
     padding-top: 299px;
@@ -271,13 +271,13 @@ a {
     overflow: auto;
     padding: 0px;
 }
- 
+
 .akSocialli {
     list-style-type: none;
     float: left;
     font-size: 25px;
 }
- 
+
 .akSociali {
     background: #205D7A;
     color: #fff;
@@ -305,10 +305,10 @@ a {
     left: 0;
     right: 0;
 }
- 
+
 .fa-facebook {
     background:#3b5998
-} 
+}
 .fa-envelope-o {
     background:#A3BAB4
 }
