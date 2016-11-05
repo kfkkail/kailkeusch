@@ -11,7 +11,12 @@ a {
 }
 
 .akfirstContainer {
-  padding-top: 70px;
+  background-color: rgba(135,206,250, 0.3);
+}
+
+.akContainerMargin {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .akContainer {
@@ -42,14 +47,14 @@ a {
 }
 
 .navbar-default .nav-justified > li > a:hover {
-  color: #A3BAB4;
+  color: #87CEFA;
 }
 
 .navbar-default .nav-justified > .active > a,
 .navbar-default .nav-justified > .active > a:hover,
 .navbar-default .nav-justified > .active > a:focus {
     color: #fff;
-    background: #A3BAB4;
+    background: #87CEFA;
     border-radius: 6px;
 }
 
@@ -57,21 +62,15 @@ a {
     text-align: center;
     font-family: 'Lato';
     font-weight: bold;
-
-    background-size: cover;
-    background-position: 29% 50%;
-    padding-top: 40px;
-    padding-bottom: 0px;
 }
 
 .akParagraph {
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 5px;
   color: inherit;
-  background-color: rgba(238, 238, 238, 0.5);
 }
 .akParagraph h1,
 .akParagraph .h1 {
+  text-align: center;
   color: inherit;
 }
 .akParagraph p {
@@ -87,12 +86,12 @@ a {
 }
 @media screen and (min-width: 768px) {
   .akParagraph {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   .akParagraph {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 240px;
+    padding-left: 240px;
   }
   .akParagraph h1,
   .akParagraph .h1 {
@@ -117,12 +116,6 @@ a {
 }
 .jumbotron h2 {
     margin-top: 0;
-}
-
-.blueimp-gallery-carousel {
-    background-color: rgba(135,206,250, 0);
-    box-shadow: 0 0 0px #000;
-    text-align: center;
 }
 
 .img-responsive {
@@ -154,15 +147,15 @@ a {
 .btn,
 .btn:focus {
   color: #FFF;
-  background-color: #A3BAB4;
-  border-color: #A3BAB4;
+  background-color: #87CEFA;
+  border-color: #87CEFA;
   outline:none;
 }
 .btn-primary:hover,
 .btn:hover{
   color: #000;
-  background-color: #A3BAB4;
-  border-color: #A3BAB4;
+  background-color: #87CEFA;
+  border-color: #87CEFA;
   outline:none;
 }
 .btn-lg {
@@ -182,9 +175,6 @@ a {
   .akContainer {
     position: static;
   }
-  .akfirstContainer {
-    padding-top: 0px;
-  }
   .akHeader {
     background-attachment: scroll;
   }
@@ -196,9 +186,6 @@ a {
 @media only screen and (-webkit-device-pixel-ratio:.75){
   .akContainer {
     position: static;
-  }
-  .akfirstContainer {
-    padding-top: 0px;
   }
   .akHeader {
     background-attachment: scroll;
@@ -212,9 +199,6 @@ a {
   .akContainer {
     position: static;
   }
-  .akfirstContainer {
-    padding-top: 0px;
-  }
   .akHeader {
     background-attachment: scroll;
   }
@@ -227,9 +211,6 @@ a {
   .akContainer {
     position: static;
   }
-  .akfirstContainer {
-    padding-top: 0px;
-  }
   .akHeader {
     background-attachment: scroll;
   }
@@ -241,9 +222,6 @@ a {
 @media only screen and (max-width: 768px) {
   .akContainer {
     position: static;
-  }
-  .akfirstContainer {
-    padding-top: 0px;
   }
   .thumb {
     width: 40%;
@@ -287,22 +265,14 @@ a {
     margin: 1%;
 }
 
-.akEnagagmentVideo {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+.fa-github {
+    background:#000000
 }
-
-.fa-facebook {
-    background:#3b5998
-}
-.fa-envelope-o {
-    background:#A3BAB4
+.fa-linkedin {
+    background:#4875B4
 }
 .fa-link {
-    background:#A3BAB4
+    background:#87CEFA
 }
 .akSocialli:hover {
     opacity: .7;
@@ -318,4 +288,9 @@ a {
 #akList {
   font-size: 16px;
   font-weight: 200;
+}
+
+#headerIcon {
+  height: 30px;
+  width: 30px;
 }
