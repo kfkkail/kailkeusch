@@ -1,0 +1,332 @@
+html {
+}
+body {
+    position: relative;
+    background:#A3BAB4;
+    font-family: 'Lato';
+}
+
+a {
+    cursor: pointer;
+}
+
+.akfirstContainer {
+  padding-top: 70px;
+}
+
+.akContainer {
+  right: 0;
+  left: 0;
+  z-index: 999;
+  position: fixed;
+}
+
+.navbar {
+    background-color: rgba(238, 238, 238, 1);
+    border-color:transparent;
+    z-index: 999;
+    min-height: 40px;
+}
+
+.nav-justifed {
+    height: 100%;
+}
+
+.navbar-default {
+    font-weight: bold;
+}
+
+.navbar-default .nav-justified > li > a,
+.navbar-default .nav-justified > li > a:hover {
+  color: #000;
+}
+
+.navbar-default .nav-justified > li > a:hover {
+  color: #A3BAB4;
+}
+
+.navbar-default .nav-justified > .active > a, 
+.navbar-default .nav-justified > .active > a:hover, 
+.navbar-default .nav-justified > .active > a:focus {
+    color: #fff;
+    background: #A3BAB4;
+    border-radius: 6px;
+}
+
+.akHeader {
+    text-align: center;
+    font-family: 'Arizonia';
+    font-weight: bold;
+    background:#fff url(../img/EngagementPhotos-31.jpg) no-repeat center;
+    background-size: cover;
+    background-position: 29% 50%;
+    padding-top: 299px;
+    padding-bottom: 0px;
+}
+
+.akParagraph {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: rgba(238, 238, 238, 0.7);
+}
+.akParagraph h1,
+.akParagraph .h1 {
+  color: inherit;
+}
+.akParagraph p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 200;
+}
+.akParagraph {
+  border-radius: 6px;
+}
+.akParagraph {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .akParagraph {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .akParagraph {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  .akParagraph h1,
+  .akParagraph .h1 {
+    font-size: 63px;
+  }
+}
+
+.akHeader1 {
+    font-family: 'Arizonia';
+    text-align: left;
+}
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    text-align: center;
+    border-radius: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 120px;
+}
+
+.jumbotron h1,
+.jumbotron h2{
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    display: inline-block;
+    border-radius: 6px;
+}
+
+.jumbotron h1 {
+    margin-bottom: 0;
+}
+.jumbotron h2 {
+    margin-top: 0;
+}
+
+.blueimp-gallery-carousel {
+    background-color: rgba(238, 238, 238, 0);
+    box-shadow: 0 0 0px #000;
+    text-align: center;
+}
+
+.img-responsive {
+    margin: 0 auto;
+}
+
+.thumb {
+    background-color: black;
+    margin-right: 10px;
+    margin-bottom: 0;
+    float: left;
+    width: 35%;
+
+    border: 4px solid #090909;
+
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.akEngageImg {
+  width: 50%;
+}
+
+.btn-primary,
+.btn-primary:focus,
+.btn,
+.btn:focus {
+  color: #FFF;
+  background-color: #A3BAB4;
+  border-color: #A3BAB4;
+  outline:none;
+}
+.btn-primary:hover,
+.btn:hover{
+  color: #000;
+  background-color: #A3BAB4;
+  border-color: #A3BAB4;
+  outline:none;
+}
+.btn-lg {
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+
+  [class*="col-"]{
+      margin-bottom: 15px;
+  }
+
+}
+
+/* Capture all the mobile devices and fix the background-attachment*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
+  .akHeader {
+    background-attachment: scroll;
+  }
+  .thumb {
+    width: 40%;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio:.75){
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
+  .akHeader {
+    background-attachment: scroll;
+  }
+  .thumb {
+    width: 40%;
+  }
+}
+
+@media only screen and (-webkit-device-pixel-ratio:1.5){
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
+  .akHeader {
+    background-attachment: scroll;
+  }
+  .thumb {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
+  .akHeader {
+    background-attachment: scroll;
+  }
+  .thumb {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .akContainer {
+    position: static;
+  }
+  .akfirstContainer {
+    padding-top: 0px;
+  }
+  .thumb {
+    width: 40%;
+  }
+}
+
+/*Tablets*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* Social Media Icons*/
+
+.akSocialul {
+    overflow: auto;
+    padding: 0px;
+}
+ 
+.akSocialli {
+    list-style-type: none;
+    float: left;
+    font-size: 25px;
+}
+ 
+.akSociali {
+    background: #205D7A;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    padding-top: 15%;
+    transition: all 0.2s ease-in-out;
+}
+
+.akRegistryli {
+    list-style-type: none;
+    float: left;
+    font-size: 25px;
+    margin: 1%;
+}
+
+.akEnagagmentVideo {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+ 
+.fa-facebook {
+    background:#3b5998
+} 
+.fa-envelope-o {
+    background:#A3BAB4
+}
+.fa-link {
+    background:#A3BAB4
+}
+.akSocialli:hover {
+    opacity: .7;
+}
+.akRegistryli:hover {
+    opacity: .7;
+}
+
+#akItalics {
+  font-style: italic;
+}
+
+#akList {
+  font-size: 16px;
+  font-weight: 200;
+}
