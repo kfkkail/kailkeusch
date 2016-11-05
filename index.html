@@ -5,10 +5,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Overview of Kail Keusch experience and projects.">
+    <meta name="description" content="Overview of experience and projects for Kail Keusch.">
     <meta name="author" content="Kail Keusch">
 
-    <!-- Thanks to SarahLovesBradley.com for inspiration for this website - https://github.com/bmgdev/responsive-wedding -->
     <link rel="shortcut icon" href="img/favicon.ico">
 
     <!-- For iPhone 4 with high-resolution Retina display: -->
@@ -53,19 +52,27 @@
     <div class="container akContainer">
         <div class="akNavbar navbar navbar-default" role="navigation">
             <ul class="nav nav-justified">
-                <li><a id="brideandgroomTr" href="#brideandgroom">About Me</a></li>
+                <li><a id="aboutme" href="#aboutme">About Me</a></li>
+                <li><a id="projects" href="#projects">Projects</a></li>
             </ul>
         </div> <!-- akNavbar -->
     </div>  <!-- container -->
 
     <div class="container akfirstContainer">
 
-        <!-- BRIDEANDGROOM -->
-        <section id="brideandgroom">
+        <!-- ABOUTME -->
+        <section id="aboutme">
             <div class="akParagraph">
                 <h1 class="akHeader1">About Me</h1>
-            </div> <!--BrideandGroom akParagraph -->
-        </section> <!-- /.brideandGroom -->
+            </div> <!--aboutme akParagraph -->
+        </section> <!-- /.aboutme -->
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <div class="akParagraph">
+                <h1 class="akHeader1">Projects</h1>
+            </div> <!--projects akParagraph -->
+        </section> <!-- /.projects -->
     </div> <!-- /container -->
 
 
@@ -82,7 +89,8 @@
             var navbarTarget;
             // script to keep the Navbar at the top of the page when scrolling down the page, but also keep it from covering the Header
             $(window).on('scroll', function() {
-                var heightOffset = $("#top.akHeader").height()+299;
+                //offset needs to be equal to the akHeader height plus .akHeader padding-top
+                var heightOffset = $("#top.akHeader").height()+40;
                 var multiplier = 1;
                 //console.log(heightOffset - $(window).scrollTop());
 
