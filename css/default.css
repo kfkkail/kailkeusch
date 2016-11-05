@@ -2,7 +2,7 @@ html {
 }
 body {
     position: relative;
-    background:#A3BAB4;
+    background-image: url("../img/concrete_seamless.png");
     font-family: 'Lato';
 }
 
@@ -22,7 +22,7 @@ a {
 }
 
 .navbar {
-    background-color: rgba(238, 238, 238, 1);
+    background-color: rgba(135,206,250, 0.5);
     border-color:transparent;
     z-index: 999;
     min-height: 40px;
@@ -68,7 +68,7 @@ a {
   padding: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: rgba(238, 238, 238, 0.7);
+  background-color: rgba(238, 238, 238, 0.5);
 }
 .akParagraph h1,
 .akParagraph .h1 {
@@ -120,7 +120,7 @@ a {
 }
 
 .blueimp-gallery-carousel {
-    background-color: rgba(238, 238, 238, 0);
+    background-color: rgba(135,206,250, 0);
     box-shadow: 0 0 0px #000;
     text-align: center;
 }
