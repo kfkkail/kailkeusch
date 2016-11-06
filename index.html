@@ -28,6 +28,16 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-47036323-5', 'auto');
+        ga('send', 'pageview');
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".akHeader" data-offset="60">
@@ -139,7 +149,7 @@
                         <img id="headerIcon" src="img/message-1.png"/>
                     </div>
                     <div class="col-md-9">
-                        <h3><a href="mailto:kail.keusch@gmail.com">kail.keusch@gmail.com</a></h3>
+                        <h3><a id="emailKail" href="mailto:kail.keusch@gmail.com">kail.keusch@gmail.com</a></h3>
                         <ul class='akSocialul'>
                             <li class='akSocialli'><a id="githubKail" href="https://github.com/kfkkail"><i class="akSociali fa fa-github"></i></a></li>
                             <li class='akSocialli'><a id="linkedinKail" href="https://www.linkedin.com/in/keuschkf"><i class="akSociali fa fa-linkedin"></i></a></li>
@@ -154,5 +164,21 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#githubKail').click(function() {
+                ga('send', 'event',  'button', 'click', 'githubKail');
+            });
+
+            $('#linkedinKail').click(function() {
+                ga('send', 'event',  'button', 'click', 'linkedinKail');
+            });
+
+            $('#emailKail').click(function() {
+                ga('send', 'event',  'button', 'click', 'emailKail');
+            });
+        });
+    </script>
   </body>
 </html>
