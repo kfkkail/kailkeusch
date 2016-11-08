@@ -20,8 +20,6 @@ a {
 }
 
 .akContainer {
-  right: 0;
-  left: 0;
   z-index: 999;
   position: fixed;
 }
@@ -67,35 +65,28 @@ a {
 .akParagraph {
   padding: 5px;
   color: inherit;
-}
-.akParagraph h1,
-.akParagraph .h1 {
-  text-align: center;
-  color: inherit;
+  padding-right: 240px;
+  padding-left: 240px;
 }
 .akParagraph p {
-  margin-bottom: 15px;
   font-size: 16px;
   font-weight: 200;
 }
-.akParagraph {
-  border-radius: 6px;
-}
-.akParagraph {
-  max-width: 100%;
-}
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1200px) {
   .akParagraph {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
+    color: inherit;
+    padding-right: 100px;
+    padding-left: 100px;
   }
+}
+
+@media screen and (max-width: 991px) {
   .akParagraph {
-    padding-right: 240px;
-    padding-left: 240px;
-  }
-  .akParagraph h1,
-  .akParagraph .h1 {
-    font-size: 63px;
+    padding: 5px;
+    color: inherit;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -160,76 +151,6 @@ a {
 }
 .btn-lg {
   font-weight: bold;
-}
-
-@media (max-width: 991px) {
-
-  [class*="col-"]{
-      margin-bottom: 15px;
-  }
-
-}
-
-/* Capture all the mobile devices and fix the background-attachment*/
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  .akContainer {
-    position: static;
-  }
-  .akHeader {
-    background-attachment: scroll;
-  }
-  .thumb {
-    width: 40%;
-  }
-}
-
-@media only screen and (-webkit-device-pixel-ratio:.75){
-  .akContainer {
-    position: static;
-  }
-  .akHeader {
-    background-attachment: scroll;
-  }
-  .thumb {
-    width: 40%;
-  }
-}
-
-@media only screen and (-webkit-device-pixel-ratio:1.5){
-  .akContainer {
-    position: static;
-  }
-  .akHeader {
-    background-attachment: scroll;
-  }
-  .thumb {
-    width: 40%;
-  }
-}
-
-@media only screen and (max-device-width: 480px) {
-  .akContainer {
-    position: static;
-  }
-  .akHeader {
-    background-attachment: scroll;
-  }
-  .thumb {
-    width: 40%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .akContainer {
-    position: static;
-  }
-  .thumb {
-    width: 40%;
-  }
-}
-
-/*Tablets*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 }
 
 /* Social Media Icons*/
