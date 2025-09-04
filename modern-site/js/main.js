@@ -61,127 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', updateNavbar);
 
-    // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            
-            // Show loading state
-            submitButton.disabled = true;
-            submitButton.textContent = 'Sending...';
-            
-            // Prepare data for submission
-            const formDataObj = {};
-            formData.forEach((value, key) => {
-                formDataObj[key] = value;
-            });
-            
-            // Send to PHP backend
-            fetch('contact.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formDataObj)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    showNotification(data.message, 'success');
-                    this.reset();
-                } else {
-                    showNotification(data.error || 'Failed to send message. Please try again.', 'error');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showNotification('Failed to send message. Please try again or contact me directly.', 'error');
-            })
-            .finally(() => {
-                // Reset button
-                submitButton.disabled = false;
-                submitButton.textContent = originalText;
-            });
-        });
-    }
-
-    // Form validation
-    const formInputs = document.querySelectorAll('.form-control');
-    formInputs.forEach(input => {
-        input.addEventListener('blur', function() {
-            validateField(this);
-        });
-        
-        input.addEventListener('input', function() {
-            if (this.classList.contains('is-invalid')) {
-                validateField(this);
-            }
-        });
-    });
-
-    function validateField(field) {
-        const value = field.value.trim();
-        const fieldName = field.name;
-        
-        // Remove existing validation classes
-        field.classList.remove('is-valid', 'is-invalid');
-        
-        // Remove existing error messages
-        const existingError = field.parentNode.querySelector('.invalid-feedback');
-        if (existingError) {
-            existingError.remove();
-        }
-        
-        // Validation rules
-        let isValid = true;
-        let errorMessage = '';
-        
-        switch (fieldName) {
-            case 'name':
-                if (value.length < 2) {
-                    isValid = false;
-                    errorMessage = 'Name must be at least 2 characters long.';
-                }
-                break;
-            case 'email':
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(value)) {
-                    isValid = false;
-                    errorMessage = 'Please enter a valid email address.';
-                }
-                break;
-            case 'subject':
-                if (value.length < 5) {
-                    isValid = false;
-                    errorMessage = 'Subject must be at least 5 characters long.';
-                }
-                break;
-            case 'message':
-                if (value.length < 10) {
-                    isValid = false;
-                    errorMessage = 'Message must be at least 10 characters long.';
-                }
-                break;
-        }
-        
-        // Apply validation result
-        if (isValid) {
-            field.classList.add('is-valid');
-        } else {
-            field.classList.add('is-invalid');
-            const errorDiv = document.createElement('div');
-            errorDiv.className = 'invalid-feedback';
-            errorDiv.textContent = errorMessage;
-            field.parentNode.appendChild(errorDiv);
-        }
-    }
-
     // Notification system
     function showNotification(message, type = 'info') {
         // Remove existing notifications
@@ -305,16 +184,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarCollapse = document.querySelector('.navbar-collapse');
     
     if (navbarToggler && navbarCollapse) {
-        navbarToggler.addEventListener('click', function() {
-            navbarCollapse.classList.toggle('show');
-        });
-        
         // Close mobile menu when clicking on a link
         const mobileNavLinks = navbarCollapse.querySelectorAll('.nav-link');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
-                navbarCollapse.classList.remove('show');
+                // Use Bootstrap's collapse method to properly close the menu
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
             });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
         });
     }
 
@@ -354,8 +243,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Escape key closes mobile menu
         if (e.key === 'Escape') {
             const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                navbarCollapse.classList.remove('show');
+            if (navbarCollapse) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
             }
         }
     });
